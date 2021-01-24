@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+
+header {
+    position: fixed;
+    top:0;
+    width: 100%;
+    background: #111;
+    color: #ccc;
+    padding: 10px;
+    text-align: center;
+    z-index: 20;
+    font-size: 32px;
+    text-transform: uppercase;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2{
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchbar-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    padding: 100px 5px 5px 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchbar {
+    padding: 10px;
+    width: calc(100% - 10px);
+    height: 50px;
+}
+
+.movies-container {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.movie-container {
+    text-align: center;
+    padding: 10px;
+    width: 30%;
+}
+
+@media screen and (min-width: 1300px){
+    .movie-container {
+        width: 22%
+    }
+}
+
+@media screen and (max-width: 992px){
+    .movie-container {
+        width: 40%
+    }
+}
+
+@media screen and (max-width: 700px){
+    .movie-container {
+        width: 100%
+    }
+}
+
+.movie-container img {
+    height: 400px;
+}
+
+.loader-container {
+  position: absolute;
+  z-index: 30;
+  background: rgba(63, 65, 64, 0.342);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.loader {
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #3498db;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  -webkit-animation: spin 2s linear infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
   }
-  to {
-    transform: rotate(360deg);
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-}
+
+
+
