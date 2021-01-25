@@ -1,21 +1,34 @@
 import { useState } from "react";
 
 function Search(props) {
+  const [searchValue, setsearchValue] = useState("");
 
-    const [searchValue, setsearchValue] = useState("");
+  //   const handleValueChange = (e) => {
+  //       setsearchValue(e.target.value);
+  //   }
 
-    const searchMovie = (e) => {
-        setsearchValue(e.target.value);
-        console.log(e.target.value);
-        // props.search(searchValue);
-        props.search(e.target.value);
-    }
+  const searchMovie = (e) => {
+    e.preventDefault();
 
-    return (
-        <div className='searchbar-container'>
-            <input className='searchbar' type='search' placeholder='Search...' value={searchValue} onChange={searchMovie} />
-        </div>
-    )
+    props.search(searchValue);
+    setsearchValue("");
+  };
+
+  return (
+    <div className="searchbar-container">
+      <form onSubmit={searchMovie}>
+        <input
+          id="input"
+          className="searchbar"
+          type="input"
+          placeholder="Search for your favorite movies"
+          value={searchValue}
+          onChange={(e) => setsearchValue(e.target.value)}
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  );
 }
 
 export default Search;
