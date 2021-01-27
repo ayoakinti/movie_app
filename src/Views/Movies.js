@@ -3,8 +3,8 @@ import { useEffect, useReducer } from "react";
 import axios from "axios";
 import Loader from "../components/Loader";
 import Header from "../components/Header";
-import Search from "../components/Search";
-import Movie from "../components/Movie";
+import Search from "../components/movies/Search";
+import Movie from "../components/movies/Movie";
 
 function Movies() {
   const MOVIE_API_URL = "https://www.omdbapi.com/?s=man&apikey=4a3b711b";

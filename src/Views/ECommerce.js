@@ -1,7 +1,10 @@
+import Header from "../components/Header";
+import Loader from "../components/Loader";
+
 function eCommerce() {
     return (
         <div>
-            eCommerce app
+            <Header title="E-commerce" />
         </div>
     )
 }
