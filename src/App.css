@@ -16,6 +16,16 @@ h2{
     margin: 0;
 }
 
+.app ul {
+    list-style: none;
+}
+
+.app ul li {
+    padding: 10px;
+    background: brown;
+    margin-bottom: 10px;
+}
+
 .searchbar-container {
     position: fixed;
     top: 0;

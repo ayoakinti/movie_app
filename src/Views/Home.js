@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div>
+    <div className="app">
       This is the home page
       <ul>
         <li>

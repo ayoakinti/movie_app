@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import ECommerce from "./Views/ECommerce";
+// import ECommerce from "./Views/ECommerce";
 import Movies from "./Views/Movies";
-import Home from "./Views/Home";
+// import Home from "./Views/Home";
 import "./App.css";
 
 function App() {
@@ -15,14 +15,15 @@ function App() {
       <Router>
         <Switch>
         <Route exact path="/">
-            <Home />
+            {/* <Home /> */}
+            <Movies />
           </Route>
-          <Route path="/movies">
+          {/* <Route path="/movies">
             <Movies />
           </Route>
           <Route path="/ecommerce">
             <ECommerce />
-          </Route>
+          </Route> */}
         </Switch>
       </Router>
     </div>
